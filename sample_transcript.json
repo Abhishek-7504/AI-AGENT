@@ -1,0 +1,9 @@
+{
+  "transcript": [
+    {"speaker": "Alice", "text": "Let's finalize the landing page design by Friday."},
+    {"speaker": "Bob", "text": "I'll handle writing the backend API."},
+    {"speaker": "Charlie", "text": "I'll prepare a marketing strategy document."},
+    {"speaker": "Diana", "text": "I'll schedule client demos for next week."},
+    {"speaker": "Eve", "text": "I'll analyze user feedback and summarize it."}
+  ]
+}
