@@ -40,6 +40,6 @@ class EmailAgent:
             server.login(self.email, self.password)
             server.send_message(msg)
             server.quit()
-            print(f"✅ Email sent to {to_email}")
+            print(f"Email sent to {to_email}")
         except Exception as e:
             print(f"Failed to send email to {to_email}: {e}")
