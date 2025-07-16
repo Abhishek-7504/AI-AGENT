@@ -31,11 +31,9 @@ from agents.email_agent import EmailAgent
 
 # Simulated emails for each person
 emails = {
-    "Asif": "asifaliahmedrafiq@gmail.com",
-    "Kiran": "holambc5@gmail.com",
-    "Sanjay": "sanjaydayanandsetty@gmail.com",
-    "Abhi": "abhiga304@gmail.com",
-    "Pratheek": "pratheekkachinthaya@gmail.com"
+    "Person-1" : "default@example.com",
+    "Person-2" : "default@example.com",
+    "Person-3" : "default@example.com"
 }
 
 email_agent = EmailAgent()
