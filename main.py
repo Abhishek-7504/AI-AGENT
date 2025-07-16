@@ -22,14 +22,14 @@ host = data.get("host", None)
 participants = set(entry["speaker"] for entry in data["transcript"])
 
 # Get emails from user input
-print("\n🔹 Please enter email addresses for each participant:\n")
+print("\nPlease enter email addresses for each participant:\n")
 emails = {}
 for person in participants:
-    email = input(f"📧 Email for {person}: ").strip()
+    email = input(f"Email for {person}: ").strip()
     emails[person] = email
 
 if host:
-    print(f"\n👤 Host of the meeting: {host} ({emails.get(host, 'No email provided')})\n")
+    print(f"\nHost of the meeting: {host} ({emails.get(host, 'No email provided')})\n")
 
 # Initialize agents
 summarizer = SummarizerAgent()
@@ -38,18 +38,18 @@ email_agent = EmailAgent(user_email_map=emails)  # Pass emails to agent
 
 # Generate summary
 summary = summarizer.run(data)
-print("\n🔹 Summary:\n", summary)
+print("\nSummary:\n", summary)
 
 # Extract tasks
 tasks = task_extractor.run(data)
-print("\n🔹 Raw Action Items:\n", tasks)
+print("\nRaw Action Items:\n", tasks)
 
 # Parse JSON block
 try:
     json_text = extract_json_block(tasks)
     parsed_tasks = json.loads(json_text)
 except Exception as e:
-    print("\n❌ Could not extract valid JSON from model output.")
+    print("\nCould not extract valid JSON from model output.")
     print("Returned text:\n", tasks)
     raise e
 
